@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	console.log(location.origin);
+	console.log(location.pathname);
+	console.log(location.hostname);
+	console.log(location.host);
+	console.log(location.protocol);
+	console.log(location.port);
+	console.log(location.href);
+	
+	function xxx(){
+		location.reload(); //새로고침
+	}
+	
+	function yyy(){
+		location.href='http://www.google.com' // 페이지 이동
+	}
+
+</script>
+</head>
+<body>
+	<button onclick='xxx()'>reload</button>
+	<a href='javascript:yyy()'>구글</a>
+</body>
+</html>

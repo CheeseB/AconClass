@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 전체 문서에서 첫번째 자식들
+			var x = $(':first-child');
+			console.log(x); // html, head, meta, ul, li, li, p
+			
+			// li중 첫번째 자식들
+			var x = $('li:first-child');
+			console.log(x.text()); // A, b
+
+			// li중 마지막 자식들
+			var x = $('li:last-child');
+			console.log(x.text()); // A4, b4
+
+			// ul의 첫번째 자식들
+			var x = $('ul > :first-child');
+			console.log(x.text()); // A, b
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+	</div>
+</body>
+</html>

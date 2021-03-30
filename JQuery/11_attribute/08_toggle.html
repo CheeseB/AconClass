@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.highlight {
+			background: yellow;
+		}
+	</style>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('p').on('click', function(){
+				console.log('------');
+
+				// 클래스에 적용된 스타일 해제/적용
+				$(this).toggleClass('highlight');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p class="highlight">홍길동</p>
+	<p>이순신</p>
+	<p>유관순</p>
+</body>
+</html>

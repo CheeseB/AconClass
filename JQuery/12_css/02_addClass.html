@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		p {
+			margin: 8px;
+			font-size: 16px;
+		}
+		.selected {
+			color: red;
+		}
+		.highlight {
+			background: yellow;
+		}
+	</style>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#b1').on('click', function(){
+				// 태그에 class 추가
+				// 기존 클래스가 있으면 기존 속성 뒤에 추가됨
+				$('#a1').addClass('selected highlight');
+			});
+
+			$('#b2').on('click', function(){
+				$('#a1').removeClass('selected highlight');
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="a1">World1</p>
+	<p id="a2">World2</p>
+	<p id="a3">World3</p>
+	<button id="b1">addClass</button>
+	<button id="b2">removeClass</button>
+	<button id="b3">toggleClass</button>   
+</body>
+</html>

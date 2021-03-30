@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 자식이 없는 요소 반환(텍스트도 자식임)
+			$('td:empty').css('background-color', 'lightblue');
+
+			// 자식이 있는 요소 반환(empty의 반대)
+			$('td:parent').css('background-color', 'lightgreen');
+		});
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>TD #0</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>TD #2</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>TD#5</td>
+		</tr>
+	</table>
+</body>
+</html>

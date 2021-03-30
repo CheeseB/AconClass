@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var sum = 0;
+			$.each($('li'), function(i, elt){
+				console.log(i, elt);
+				sum = sum + parseInt(elt.innerText);
+			});
+			console.log(sum);
+			$('#result').text(sum);
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>100</li>
+		<li>200</li>
+		<li>300</li>
+		<li>400</li>
+	   </ul>
+		<span id="result"></span>	 
+</body>
+</html>

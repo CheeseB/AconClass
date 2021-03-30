@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// p 바로 뒤 형제 a
+			console.log($('p+a').length); //2
+
+			// p 뒤의 모든 형제 a
+			console.log($('p~a').length); //3
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<p>p</p>
+		<a href="">daum</a>
+		<a href="">naver</a>
+		
+		<p>p</p>
+		<a href="">test</a>
+		<p>
+			<a href="">Google</a>
+		</p>
+	</div>
+</body>
+</html>

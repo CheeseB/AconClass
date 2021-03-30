@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name='myForm' action='test/target2.html' method='post'>
+		아이디:<br><input type='text' name='userid' value='test'><br>
+		비밀번호:<br><input type='password' name='password'><br>
+		<input type='submit' value='전송'>
+	</form>
+	<br>
+	<form name='myForm2' action='test/target2.html' method='get'>
+		<input type='radio' name='gender' value='male' checked>남<br>
+		<input type='radio' name='gender'>여
+		<input type='checkbox' name='fruits' value='apple' checked>사과<br>
+		<input type='checkbox' name='fruits'>바나나
+		<button>전송</button>
+	</form>
+	<br>
+	<form name='myForm3' action='test/target2.html' method='get'>
+		<select name='cars'>
+			<option>볼보</option>
+			<option value='saab'>사브</option>
+			<option value='fiat'>피아트</option>
+			<option value='audi' selected='selected'>아우디</option>
+		</select>
+		<input type='submit' value='전송'>
+	</form>
+	<br>
+	<form name='myForm4' action='test/target2.html' method='get'>
+		<input type='text' name='userid'><br>
+		<textarea name='message' rows='10' cols='30'>여러 라인 사용가능</textarea><br>
+		<button>전송</button>
+		<button type='reset'>취소</button>
+	</form>
+	<br>
+	<form name='myForm5' action='test/target2.html' method='post' enctype='multipart/form-data'>
+		<input type='file' name='theFile'><br>
+		<input type='submit' value='전송'> 
+		<input type='reset' value='취소'>
+	</form>
+	<br>
+	<form name='myForm6' action='test/target2.html' method='get'>
+		<fieldset>
+			<legend>로그인</legend>
+			아이디: <input type='text' name='userid' value='test'><br>
+			비밀번호: <input type='text' name='passwd'><br>
+			<input type='submit' value='전송'>
+		</fieldset>
+	</form>
+</body>
+</html>

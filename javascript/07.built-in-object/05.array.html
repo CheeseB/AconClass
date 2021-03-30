@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 자바스크립트의 배열 특징 */
+	// 배열 또한 객체로 취급됨
+	// 배열의 길이에 제한이 없음
+	// 배열에 저장할 수 있는 데이터 타입이 제한되지 않음
+
+
+/* 배열 생성방법 */
+	// 리터럴
+	var a = ['A', 'B', 'C', 10, true];
+	
+	// new 사용
+	var aa = new Array('A', 'B', 'C', 10, true);
+
+
+/* 배열 요소 추가 */
+	var b = new Array();
+	b[0] = 'a';
+	b[1] = 'b';
+	b[2] = 'c';
+
+	console.log(b[0], b[1], b[2]);
+
+
+/* 배열 요소 출력하기 */
+	// 일반적인 for문
+	for (var i=0; i<a.length; i++){
+		console.log(a[i]);
+	}
+
+	// for ~in: 인덱스 접근
+	for (var i in a){
+		console.log(a[i]);
+	}
+	
+	// for ~of: 값 접근
+	for (var i of a){
+		console.log(i);
+	}
+
+	// forEach
+	
+
+/* Array 내장함수 */
+	/* 배열 길이 구하기 */
+	console.log(a.length)
+	
+	/* 배열 요소 추가 */
+	var c = new Array();
+	c.push(10);
+	c.push(20);
+	c.push(30, 40);
+	
+	console.log(c[0], c[1], c[2], c[3], c[4]); // c[4]: undefined
+	
+	/* 배열 요소 추출 및 삭제 */
+	c.pop();
+	var cpop = c.pop();
+	console.log(c, cpop);
+	
+	/* 배열 요소 거꾸로 배치 */
+	a.reverse();
+	console.log(a);
+	
+	/* 배열 슬라이스 */
+	var d = a.slice(0, 2); // 0인덱스부터 2인덱스 전까지 슬라이스
+	console.log(d);
+	
+	/* 요소 삭제 및 저장 */
+	var x = ['a', 'b', 'c'];
+	x.splice(0, 2, 'X', 'Y'); // 0인덱스부터 2개 삭제 후 X,Y 저장
+	console.log(x)
+	
+	x.splice(2, 0, 'KKKK'); // 2인덱스부터 삭제 없이 KKKK 저장
+	console.log(x);
+	
+	x.splice(0, 2); // 0인덱스부터 2개 삭제
+	console.log(x);
+	
+	/* 정렬 */
+	var y = [10, 3, 'c', 54, 1, 'a', 44, 33, 'b'];
+	y.sort(); // 내림차순 정렬이 기본
+	console.log(y);
+	
+	// 오름차순
+	y.sort(function(a, b){
+		return a-b;
+	})
+	
+	// 내림차순
+	y.sort(function(a, b){
+		return b-a;
+	})
+	
+	/* 배열 요소들 합쳐서 문자열로 리턴 */
+	var fruits = ['banana', 'apple', 'melon'];
+	var joinedFruits = fruits.join(' and '); // 구분자 지정 가능
+	console.log(joinedFruits);
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// click 이벤트 시 kkk함수 호출
+			$('li').click(kkk);
+		});
+
+		function kkk(event){
+			// 이벤트 발생 요소 저장
+			var target = $(event.target);
+			console.log(target);
+
+			if(target.is('li')){
+				target.css('background-color', 'green');
+				var isStrong = target.is(function(){
+					console.log($('strong', this));
+					// li 내에 strong이 있으면
+					return $('strong', this).length == 1;
+				}); // true or false 저장
+				if(isStrong){ // true인경우
+					target.css('font-size', '30px');
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+	 <li>A1</li>
+	 <li>A2</li>
+	 <li>A3</li>
+	 <li>A<strong>4</strong></li>
+	 <li>A5</li>
+	 </ul>	
+</body>
+</html>

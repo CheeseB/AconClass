@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<p>hello</p>
+	<div>
+		<div id = 'x'><h1>양지몬</h1></div>
+		<div id = 'y'><h1>양지몬</h1></div>
+		<button onclick='change()'>이름 바꾸기</button>
+	</div>
+	
+	<script type="text/javascript">
+		var text = document.getElementById('x').innerText; // 태그는 빼고 문자열만 나옴
+		console.log('innerText = ', text);
+		console.log(text.length);
+		console.log(text.charAt(0));
+		
+		var html = document.getElementById('y').innerHTML; // 태그도 함께 나옴
+		console.log('innerHTML = ', html);
+		
+		/* innerHTML이나 innerText를 여러번 쓴다고 해서 그게 다 나오는게 아니라 마지막것만 나옴 (이후에 쓴걸로 계속 덮어씌어지기 때문)
+		innerText와 innerHTML은 안의 텍스트나 html문서를 어떤것으로 설정할지 정하는거지 계속 추가하는게 아님
+		여러줄을 쓰고싶으면 애초에 문자열 하나에 합치고 나서 넣어야됨 */
+		function change(){
+			document.getElementById('y').innerHTML = '<h1>양자몬</h1>';
+			document.getElementById('y').innerHTML = '<h1>양재몬</h1>';
+		}
+	</script>
+</body>
+</html>

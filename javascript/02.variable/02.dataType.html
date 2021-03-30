@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 자바스크립트 변수 특징
+ *	1. 데이터형을 지정하지 않음
+ 		- 실행단계에서 알아서 결정됨
+ 	2. 데이터형 변환이 자유로움
+ 		- 변수에 저장하는 값에 따라 타입이 유동적으로 결정됨
+ 	3. 함수단위 스코프 (블럭단위 아님)
+ 		- 동일 함수 내에선 if나 for문 상관 없이 어디서든 변수 사용 가능
+ */
+
+var str = 'abc';
+console.log(typeof str); // string
+
+var bool = true;
+console.log(typeof bool); // boolean
+ 
+var undefinedVar;
+console.log(typeof undefinedVar); // undefined
+
+var nullVar = null;
+console.log(typeof nullVar); // object (null)
+
+var func = function(){}
+console.log(typeof func); // function
+
+var num = parseInt('123');
+console.log(typeof num); // number
+
+var notNum = parseInt('hello'); // NaN
+console.log(typeof notNum); // number
+
+var arr = [1, 2, 3, 4] // json array
+console.log(typeof arr); // object
+
+var obj = {'username': '양지몬', 'age': 27}; // json object
+console.log(typeof obj); // object
+
+console.log(obj.username, obj.age);
+console.log(obj['username'], obj['age']);
+
+// 객체에 없는 프로퍼티 접근은 undefined로 처리됨
+console.log(obj['0'], obj['1']); // undefined
+
+// var 없이 변수 선언하면 전역범위인 windows에 변수 선언됨 (권장하진 않음)
+glob = 10;
+
+// 상수 선언
+const T = 123;
+// T = 124; // 상수는 값 변경 불가!
+
+// 변수 instanceof 객체 : 변수가 해당 객체인지 아닌지
+console.log(str instanceof String);
+console.log(num instanceof Number);
+console.log(arr instanceof Array);
+console.log(obj instanceof Object);
+
+</script>
+</head>
+<body>
+</body>
+</html>

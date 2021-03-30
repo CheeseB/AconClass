@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 즉시 호출 함수: 호출하지 않아도 자동으로 호출됨
+(익명함수(): function 이름 없음(){코드})(); -> 자신이 자신을 실행 */
+(function() {
+	console.log('즉시 호출 함수');
+})();
+
+
+function outputNumbers(count) {
+	// 즉시호출함수 구현
+	(function() {
+		for (var i = 0; i < count; i++) {
+			console.log(i);
+		}
+	})();
+	
+	// 즉시호출 함수도 함수이므로 그 안의 변수를 밖에선 접근 불가함
+	// console.log(i); // error!
+	
+	console.log('count>>', count);
+}
+
+outputNumbers(5);
+
+
+/* 익명함수가 test 함수 안에 있으므로 n 사용 가능함 */
+function test(n) {
+	(function() {
+		console.log(n);
+	})();
+}
+test(10); // 10
+
+</script>
+</head>
+<body>
+</body>
+</html>

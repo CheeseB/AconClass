@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// focus 상태일 때
+			$('#target').on('focus', function(){
+				$(this).css('background', 'yellow');
+			});
+
+			// focus 되었다가 해제되면 blur 처리됨
+			$('#target').on('blur', function(){
+				$(this).css('background', 'pink');
+			});
+
+			$('#other').on('click', function(){
+				console.log('other 클릭');
+				// $('#target').trigger('focus');
+				$('#target').focus();
+			});
+
+			$('#other2').on('click', function(){
+				console.log('other 클릭');
+				$('#target').blur();
+			});
+
+			$('#other3').on('click', function(){
+				console.log('other 클릭');
+				// 이벤트 삭제
+				$('#target').off('blur focus');
+			});
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="target">
+		<input type="text" >
+	</form>
+	<button id="other">focus</button>
+	<button id="other2">blur</button>
+	<button id="other3">clear</button>		
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 함수 리터럴(익명함수) - 변수명이 함수명이 됨*/
+
+var func = function(num){
+	console.log(num);
+}
+
+func(10);
+
+// 함수 정의 전에 호출이 불가함
+// 함수 생성 시점이 프로그램 실행단계이기 때문
+
+//func1(); // error!
+var func1 = function(){
+	console.log('test')
+}
+
+
+// Function 생성자를 이용한 방법
+// 마지막 인자가 함수의 실행 코드가 됨
+// 마찬가지로 프로그램 실행단계에서 생성되므로 정의 전에 호출 불가능함
+
+// console.log(func2(10, 2)); // error!
+var func2 = new Function('x', 'y', 'return x/y');
+console.log(func2(10, 2));
+
+</script>
+</head>
+<body>
+</body>
+</html>

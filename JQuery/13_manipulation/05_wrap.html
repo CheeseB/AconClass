@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('button').on('click', function(){
+				// .wrap(html): 선택 요소들을 각각 하나씩 에워쌈
+				// .wrapAll(html): 선택 요소들을 한꺼번에 에워쌈
+            	$('.my').wrap('<div style="border: 1px solid black"></div>');
+				$('.my').wrapAll('<div style="border: 1px solid black"></div>');
+            	
+				$('.my').wrap('h1');
+				$('.my').wrapAll('h1');
+			})
+		});
+	</script>
+</head>
+<body>
+    <h1>영웅들</h1>
+    <div>
+       <div class="my">홍길동</div>
+       <div class="my">이순신</div>
+    </div>
+    <button>ok</button>
+</body>
+</html>

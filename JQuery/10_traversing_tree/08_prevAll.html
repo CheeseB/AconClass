@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .prevAll(선택자): .nextAll()의 앞 형제 버전
+			$('div:last').prevAll().css('color', 'red');
+			$('p:last').prevAll('.my').css('font-size', '40px');
+		});
+	</script>
+</head>
+<body>
+	<div>A</div>
+	<p>A2</p>
+	<div>B</div>
+	<p class="my">B2</p>
+	<div>C</div>
+	<div class="my">C2</div>
+	<p>C3</p>
+</body>
+</html>

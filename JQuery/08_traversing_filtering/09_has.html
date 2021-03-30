@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .has(선택자): 지정된 선택자를 포함한 요소 반환
+			$('li').has('ul').css('background-color', 'yellow');
+		});
+	</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+	 <li>A1</li>
+	 <li>A2</li>
+	 <li>A3
+	   <ul>
+		<li>B1</li>
+		<li>B2</li>
+		<li>B3</li>
+	   </ul>
+	 </li>
+	 <li>A4</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#one{
+			background: blue;
+			border: 1px solid blue;
+			width: 70px;
+			height: 70px;
+			margin: 0 3px;
+			float: left;
+		}
+		#two{
+			background: red;
+			border: 1px solid blue;
+			width: 70px;
+			height: 70px;
+			margin: 0 3px;
+			float: left;
+		}
+		#three{
+			background: green;
+			border: 1px solid blue;
+			width: 70px;
+			height: 70px;
+			margin: 0 3px;
+			float: left;
+		}
+	</style>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('span').click(function(){
+				$('div:hidden:first').fadeIn('slow');
+			});
+		});
+	</script>
+</head>
+<body>
+	<span>click here...</span>
+	<div id="one" style="display:none;"></div>
+	<div id="two" style="display:none;"></div>
+	<div id="three" style="display:none;"></div>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// hover는 mouseEnter와 mouseLeave 둘다 구현
+			$('li').hover(
+				function() { //mouseEnter
+					$(this).append($('<span>***</span>'));
+				},
+				function() { //mouseLeave
+					$(this).find('span').remove();
+				}
+			);
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>홍길동</li>
+		<li>이순신</li>
+		<li class="fade">유관순</li>
+		<li class="fade">강감찬</li>
+	</ul>	
+</body>
+</html>

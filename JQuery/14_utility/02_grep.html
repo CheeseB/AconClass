@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// $.grep(arr, func, true/false): 필터링 처리 후 다시 배열로 반환
+			// function의 인자 순서가 다름 (data, idx)
+			// true이면 return에 해당하지 않는 것을, false면 해당하는 것을 반환
+
+			var s = ['a', 'b', 'c', 'd'];
+
+			var arr = $.grep(s, function(data, idx){
+				return data == 'b';
+			}, true);
+			console.log(arr); // acd
+
+			var arr2 = $.grep(s, function(data, idx){
+				return data == 'b';
+			}, false);
+			console.log(arr2); //b
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>

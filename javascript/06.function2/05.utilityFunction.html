@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+// setTimeout: 일정시간 후에 함수를 딱 한번 실행함
+setTimeout(function(){
+	console.log('3초 뒤에 출력');
+}, 3000);
+
+
+// setInterval: 일정 시간마다 반복해서 함수를 실행함
+var interval = setInterval(function(){
+	console.log('3초마다 출력');
+}, 3000);
+
+
+// clearInterval: setInterval 반복 종료
+clearInterval(interval);
+
+
+// parseInt/parseFloat: 문자열을 숫자/실수로 변환
+var num = parseInt('123');
+var f = parseFloat('3.14');
+
+
+// substr(시작, 끝)
+console.log('abcde'.substr(0, 3));
+
+
+/*---------------------*/
+
+
+setTimeout(aaa, 5000); // aaa함수 5초 후 실행
+
+function aaa(){
+	alert('aaa');
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

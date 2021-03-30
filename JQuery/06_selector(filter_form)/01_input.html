@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/* 중요! */
+		$(function(){
+			// $(input[type='text']) 와 동일
+			var x = $('input:text');
+			console.log(x.length); // 2
+
+			// $(input[type='checkbox']) 와 동일
+			var x = $('input:checkbox');
+			console.log(x.length); // 2
+
+			// checked 확인
+			var x = $('input:checked');
+			console.log(x.val()); // checked
+
+			// :not() - 부정
+			var x = $('input:not(:checked)');
+			console.log(x.length); // 5
+
+			// hidden 확인
+			var x = $('input:hidden');
+			console.log(x.val()); // hidden
+
+			// enabled 확인
+			var x = $('input:enabled');
+			console.log(x.length); // 5 (디폴트가 enabled라서 5개 나옴)
+
+			// disabled 확인
+			var x = $('input:disabled');
+			console.log(x.length); // 1
+		});
+	</script>
+</head>
+<body>
+	<button>OK</button>
+	<form>
+		x:<input type="text" name="x" enabled=enabled><br>
+		xx:<input type="text" name="xx" disabled="disabled"><br>
+		x2:<input type="password" name="x2"><br>
+		x3:<input type="hidden" name="x3" value='hidden'><br>
+		x4:<input type="checkbox" name="x4" checked="checked" value="checked"><br>
+		x5:<input type="checkbox" name="x5"><br>
+		<select>
+			<option>10</option>
+			<option selected="selected">20</option>
+			<option>30</option>
+		</select>
+	</form>
+</body>
+</html>

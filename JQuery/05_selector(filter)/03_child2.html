@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// h1중 유일한 자식들
+			var x = $('h1:only-child');
+			console.log(x.text()); // eee
+
+			// 전체 문서에서 n번째 자식들
+			var x = $(':nth-child(2)');
+			console.log(x); // title, body, ul, li, li
+
+			// 전체 문서에서 배수 번째 자식들
+			var x = $(':nth-child(3n)');
+			console.log(x); // script, li, li, ul, li, li
+
+			// li 중에서 짝수 번째(index 1부터 시작) 자식들
+			// li:nth-child(2n)과 같음
+			var x = $('li:nth-child(even)');
+			x.css('color', 'red');
+
+			// li 중에서 부모 기준으로 짝수번째(index 0부터 시작) 자식들
+			var x = $("li:even");
+			x.css('background-color', 'yellow');
+
+			// li 중에서 홀수 번째(index 0부터 시작) 자식들
+			// li:nth-child(2n+1)과 같음
+			var x = $('li:nth-child(odd)');
+			x.css('color', 'blue');
+			
+			// li 중에서 부모 기준으로 홀수번째(index 1부터 시작) 자식들
+			var x = $("li:odd");
+			x.css('font-size', '20px');
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>eee</h1>
+	</div>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+		<li>A5</li>
+		<li>A6</li>
+		<li>A7</li>
+		<li>A8</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+		<li>b5</li>
+		<li>b6</li>
+		<li>b7</li>
+		<li>b8</li>
+	</ul>
+	<div>		
+		<p>Hello</p>
+	</div>
+</body>
+</html>

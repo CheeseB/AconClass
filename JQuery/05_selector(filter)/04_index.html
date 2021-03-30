@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			/*	eq(index): 지정한 index에 해당하는 요소 반환
+				음수값도 지정 가능함 (마지막 요소부터 시작) */
+
+			// 전체 문서에서 0번째 인덱스
+			var x = $(":eq(0)");
+			console.log(x); // html
+
+			// li중 2번째 인덱스
+			var x = $("li:eq(2)");
+			console.log(x.text()); // A3
+
+			// li중 인덱스 2보다 큰것들
+			var x = $("li:gt(2)");
+			x.css('color', 'red');
+
+			// li중 인덱스 5보다 작은것들
+			var x = $("li:lt(5)");
+			x.css('background-color', 'yellow');
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<h1>JQuery</h1>
+	</div>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>		
+		<p>Hello</p>
+	</div>
+</body>
+</html>

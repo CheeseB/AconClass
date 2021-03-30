@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .parent(선택자): 현재 요소의 바로 위 부모 중 선택자와 일치하는것 반환
+			// 선택자 생략하면 그냥 바로위 부모 반환
+			// 일치하는 부모가 여러개면 배열로 반환
+			$("p").parent().css("color", "red");
+        	$("p").parent("#my").css("font-size", "40px");
+		});
+	</script>
+</head>
+<body>
+	<div>
+		A
+		<div>
+			B
+			<p>C</p>
+		</div>
+	</div>
+	<div id="my">
+		<p>D</p>
+	</div>	
+</body>
+</html>

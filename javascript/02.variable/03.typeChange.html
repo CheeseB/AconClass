@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+
+/* 필요 시 자동으로 형변환 됨 */
+
+/* 숫자로 형변환 */
+	var x1 = '10' * 2;
+	console.log(x1); // 20
+
+	var x2 = '10' - 2;
+	console.log(x2); // 8
+
+	var x3 = '10' / 2;
+	console.log(x3); // 5
+
+	// 더하기는 예외!
+	var x4 = '10' + 2;
+	var x5 = 2 + '10';
+	console.log(x4, x5); // 102 210
+	
+	
+/* 불린 형변환 (조건문에 사용 가능)
+ * [0, '', NaN, null, undefined] 이 5가지만 false로 변환,
+ * 그 외에는 true로 변환됨
+ */
+	var y1 = 0; // false
+	var y2 = ''; // false
+	var y3 = parseInt('aaa'); // false (NaN)
+	var y4 = null; // false
+	var y5; // false (undefined)
+
+
+/* 자바스크립트는 같은 이름의 변수를 두번 선언해도 에러가 나지 않으며,
+ * 변수에 모든 타입의 값을 여러번 저장할 수도 있음
+ */
+	var test = 10;
+	var test = 'a';
+	test = true;
+	test = {'a': 1, 'b': 2};
+	console.log(test); // object
+
+</script>
+</head>
+<body>
+</body>
+</html>

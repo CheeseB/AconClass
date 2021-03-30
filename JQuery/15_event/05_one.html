@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+        // one : 이벤트를 한 번만 실행. 실행 후 자동으로 이벤트가 off됨 
+        $(document).ready(function() {
+            $("#a").one("click", function() {
+                console.log("ok");
+            });
+        });
+	});
+	</script>
+</head>
+<body>
+    <button id="a">ok</button>
+</body>
+</html>

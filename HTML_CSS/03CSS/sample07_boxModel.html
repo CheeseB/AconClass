@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	div {
+		margin: 10px;
+		height: 100px;
+		background-color: red;
+	}
+	
+	#one {
+		width: 700px;
+	}
+
+	/*	그냥 width는 고정이라 화면크기가 그보다 작아지면 화면을 뚫지만
+		max-width는 화면 크기에 맞춰서 작아짐
+		화면 크기가 더 커져도 설정한 크기 유지 (원래는 100% 채워짐) */
+	#three {
+		max-width: 700px;
+	}
+	
+	/*	margin, padding은 width, height 속성과 별도로 적용됨
+		width, height가 적용되는건 컨텐츠 자체 뿐
+		전체 박스 크기 = width or height + 2*(padding + border + margin) */
+	p {
+		width: 100px;
+		height: 100px;
+		background-color: green;
+		margin: 10px;
+		padding: 30px;
+		border: 5px solid black;
+	}
+
+	/*	margin/padding:(4개) 상 우 하 좌
+					   (3개) 상  좌우 하
+					   (2개) 상하   좌우 */
+	
+	/* margin: auto
+		- 자동으로 페이지 가운데 정렬 */
+	
+	/* box-sizing: border-box
+		- border를 기준으로 width, height를 맞춤
+		- padding을 넣으면 전체 박스 사이즈는 그대로, 안의 내용물 크기가 작아짐 */
+	
+	/* box-sizing: content-box
+		- 디폴트 값으로, 안의 내용을 기준으로 width와 height를 맟줌
+		- padding을 넣으면 내용물은 그대로, 전체 박스 사이즈가 커짐 */
+	
+</style>
+</head>
+<body>
+	
+	<div id='one'>one</div>
+	<div id='two'>two</div>
+	<div id='three'>three</div>	
+	<p>box</p>
+
+</body>
+</html>

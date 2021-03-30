@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .map(함수): 선택된 요소들을 함수에 매핑하여 배열로 반환
+			var arr = $('li').map(function(idx, ele){
+				console.log('this: ', this, '\nele: ', ele, '\n$(this).text(): ', $(this).text());
+				return $(this).text().toLowerCase();
+			});
+			console.log('arr: ', arr);
+		});
+	</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+	 <li>A1</li>
+	 <li>A2</li>
+	 <li>A3
+	   <ul>
+		<li>B1</li>
+		<li>B2</li>
+		<li>B3</li>
+	   </ul>
+	 </li>
+	 <li>A4</li>
+	</ul>
+</body>
+</html>

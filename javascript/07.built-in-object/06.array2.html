@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	/* 함수 매개변수로 배열 받기 */
+	function a(n){
+		for (var i of n){
+			console.log(i);
+		}
+	}
+	var aa = [10, 20, 30];
+	a(aa);
+	
+	
+	/* 함수 리턴값으로 배열 받기 */
+	function b(){
+		return [10, 20, 30];
+	}
+	var bb = b();
+	console.log(bb);
+
+	
+	/* 함수 안에서 배열 값 변경 */
+	function c(n){
+		n[0] = 100;
+	}
+	var cc = [10, 20, 30];
+	c(cc);
+	console.log(cc);
+	
+	// 배열은 참조객체라 함수내 변경이 가능하지만
+	// 일반객체는 함수 내 변경 불가
+	function d(n){
+		n = 100;
+	}
+	var dd = 10;
+	d(dd);
+	console.log(dd);
+
+</script>
+</head>
+<body>
+</body>
+</html>

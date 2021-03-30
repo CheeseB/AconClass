@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type='text/javascript'>
+
+/* Hoisting
+ * 자바스크립트 코드는 함수 안의 모든 변수를 함수 맨 처음으로 끌어올린 것처럼 동작한다.
+ * 어떤 함수 안에 선언된 모든 변수는 그 함수 전체에 걸쳐 유효하며,
+ * 즉 변수가 선언되기 전에도 유효한 것이다. (선언만 되고 초기화는 안된 상태)
+ */
+
+var scope = 'global';
+function f(){
+	console.log(scope); // undefined
+	var scope = 'local';
+	console.log(scope); // local
+}
+
+f();
+
+/* 위와 같은 동작임
+function f(){
+	var scope;
+	console.log(scope);
+	scope = 'local';
+	console.log(scope);
+} */
+
+
+var foo = 3;
+function showFoo() {
+	// 같은 이름의 전역, 지역변수가 있다면 지역변수를 호이스팅해서 사용함
+	console.log(foo); // undefined
+	
+	var foo;
+	foo = 'inky';
+	
+	console.log(foo); // inky
+}
+
+showFoo();
+
+
+var scope = 'hello';
+function f(){
+	document.write(scope + '<br>'); // undefined
+	var scope = 'test';
+	document.write(scope + '<br>'); // test
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

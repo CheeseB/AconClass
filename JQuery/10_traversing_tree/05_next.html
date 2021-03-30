@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .next(선택자): 같은 레벨의 바로 뒤 형제들 중 선택자와 일치하는 것 반환
+			// 선택자 생략하면 그냥 바로 뒤 형제 반환
+			$('div').next().css('color', 'red');
+			$('div').next('.my').css('font-size', '40px');
+		});
+	</script>
+</head>
+<body>
+	<div>A</div>
+	<p>A2</p>
+	<div>B</div>
+	<p class="my">B2</p>
+	<div>C</div>
+	<div class="my">C2</div>
+	<div class="my">C3</div>
+	<p>C4</p>
+</body>
+</html>

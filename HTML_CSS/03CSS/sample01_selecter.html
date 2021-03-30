@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type='text/css'>
+ 	/* 전체 선택자 */
+	* {
+		color: grey;
+	}
+	
+	/* 태그 선택자 */
+	h2 {
+		color: red;
+	}
+	
+	/* 아이디 선택자 */
+	#someID {
+		color: purple;
+	}
+	
+	/* 클래스 선택자 */
+	.someClass {
+		color: blue;
+	}
+	
+	/* 자손 선택자(하위 모든 자손) */
+	#one h1 {
+		color: skyblue;
+	}
+	
+	/* 자식 선택자(바로 밑의 자식들만) */
+	#one > h1 {
+		color: green;
+	}
+	
+	/* 모든 형제 선택자(뒤에 오는 모든 형제) */
+	h3 ~ h4 {
+		color: orange;
+	}
+	
+	/* 특정 형제 선택자(바로 뒤의 형제만) */
+	h3 + h4 {
+		color: chocolate;
+	}
+	
+	/* 쉼표로 구분: 여러 요소에 모두 적용 */
+	.a, .b {
+		background-color: pink;
+	}
+	
+	/* 붙여쓰기: 요소를 전부 갖추고 있는 곳에만 적용 */
+	.a.b {
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<h1>전체 선택자</h1>
+	<p>전체 선택자</p>
+	
+	<h2>태그 선택자</h2>
+	
+	<p id='someID'>아이디 선택자</p>
+	<p class='someClass'>클래스 선택자</p>
+	
+	<div id='one'>
+		<h1>자식, 자손 선택자</h1>
+		<h1>자식, 자손 선택자</h1>
+		<p>전체 선택자</p>
+		<div>
+			<h1>자손 선택자</h1>
+		</div>
+	</div>
+	
+	<h3>전체 선택자</h3>
+	<h4>형제 선택자</h4>
+	<h5>전체 선택자</h5>
+	<h4>형제 선택자</h4>
+	<h4>형제 선택자</h4>
+	
+	<p class='a'>쉼표로 구분</p>
+	<p class='b'>쉼표로 구분</p>
+	<p class='a b'>붙여쓰기</p>
+</body>
+</html>

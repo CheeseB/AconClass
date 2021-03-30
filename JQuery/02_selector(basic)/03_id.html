@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#a2').css('color', 'red');
+			console.log($('#a2'));
+			console.log($('#a2').innerText); //undefined(js함수 사용불가)
+			console.log($('#b').innerText); // undefined
+
+			// jquery 객체는 jquery 함수만, js 객체는 js 함수만 사용 가능
+
+			/* jquery 함수 */
+			// .innertext -> .text(): 읽어오기 .text('내용'): 쓰기
+			// .innerHTML -> .html(): 읽어오기 .html('<태그>내용</태그>'): 쓰기
+			// .value -> .val(): 읽어오기 , .val("속성값"): 쓰기
+
+         	console.log($('#c').text());
+         	console.log($('#a').text());
+         	console.log($('#c'));
+         	$('#c').text('aaaaaaaaa');
+         	$('#c').innerText="!!!"; // 미적용
+		});
+	</script>
+</head>
+<body>
+	<p id="a">hello</p>
+	<p id="a2">hello2</p>
+	<div id="b">world</div>
+	<span id="c">world2</div>
+</body>
+</html>

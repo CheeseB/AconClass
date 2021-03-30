@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// $.parseJSON(str): JSON 문자열을 JSON 오브젝트로 변환
+			var jsonString = '{"name": "홍길동", "age": "20", "address": "서울"}';
+			var jsonObj = $.parseJSON(jsonString);
+
+			console.log(jsonObj);
+
+			// JSON을 사용하려면 변환이 필요
+			var name = jsonObj.name;
+			var age = jsonObj.age;
+			var address = jsonObj.address;
+
+			$('#result').append(name+age+address);
+			$('#result').append('<h1>'+name+age+address+'</h1>')
+		});
+	</script>
+</head>
+<body>
+	<div id="result"></div> 
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .next(선택자): 같은 레벨에서 뒤의 모든 형제들 중 일치하는 요소 모두 반환
+			// 선택자 생략 시 다음 형제요소 모두 반환
+			$('div:first').nextAll().css('color', 'red');
+			$('div:first').nextAll('.my').css('font-size', '40px');
+		});
+	</script>
+</head>
+<body>
+	<div>A</div>
+	<p>A2</p>
+	<div>B</div>
+	<p class="my">B2</p>
+	<div>C</div>
+	<div class="my">C2</div>
+	<p>C3</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	div.static {
+		/* position: static; */
+		border: 3px solid black;
+		top: 100px;
+		right: 100px;
+	}
+	
+	div.relative {
+		position: relative;
+		width: 300px;
+		height: 200px;
+		border: 3px solid red;
+		left: 50px;
+	}
+	
+	div.fixed {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		width: 300px;
+		border: 3px solid blue;
+	}
+	
+	div.absolute {
+		position: absolute;
+		top: 80px;
+		right: 0;
+		width: 100px;
+		height: 100px;
+		border: 3px solid green;
+	}
+
+</style>
+</head>
+<body>
+
+<h2> position: static (디폴트) </h2>
+<p> 페이지 흐름에 따라 자동적으로 위치되며, 특정 위치 설정(top/bottom/left/right)에 영향을 받지 않음  </p>
+<div class='static'> static 포지션인 div </div>
+
+<h2> position: relative </h2>
+<p> 디폴트인 static일 때의 위치 기준으로 상대적인 위치가 결정되며, top/bottom/left/right 으로 위치를 결정함 </p>
+<div class='relative'> relative 포지션인 div </div>
+
+<h2> position: fixed </h2>
+<p> 뷰포트 기준으로 상대적인 위치가 결정되며, 페이지가 스크롤 되어도 항상 고정된 자리에 위치함 </p>
+<div class='fixed'> fixed 포지션인 div </div>
+
+<h2> position: absolute </h2>
+<p> 가장 가까운 부모 기준으로 상대적인 위치가 결정되며,
+	만약 부모가 없거나 부모가 static 포지션이라면 body를 기준으로 설정됨 (스크롤 시 움직임) </p>
+<div class='relative'>
+	relative 포지션인 부모 div
+	<div class='absolute'> absolute 포지션인 div </div>
+</div>
+
+</body>
+</html>

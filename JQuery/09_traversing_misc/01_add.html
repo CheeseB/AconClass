@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 선택자1.add(선택자2): 선택자1과 선택자2 두개의 태그를 검색
+			// $('선택자1, 선택자2')와 동일함
+			$('li').add('p').css('color', 'red');
+		});
+	</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+	 <li>A1</li>
+	 <li>A2</li>
+	 <li>A3</li>
+	 <li>A4</li>
+	 <li>A5</li>
+	 <li>A6</li>
+	 <li>A7</li>
+	 <li>A8</li>
+	</ul>	
+</body>
+</html>

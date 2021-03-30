@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+div {
+	width: 200px;
+	height:80px;
+}
+
+div.visible {
+	/* overflow: visible; */
+	background-color: green;
+}
+
+div.hidden {
+	overflow: hidden;
+	background-color: yellow;
+}
+
+div.scroll {
+	overflow: scroll;
+	/* overflow-x: scroll; */
+	/* overflow-y: scroll; */
+	background-color: pink;
+}
+
+div.auto {
+	overflow: auto;
+	background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+
+<h1> overflow 속성: 자식 요소가 부모의 범위를 벗어났을 때 처리방법 </h1>
+
+<div class='visible'>
+	<h2>overflow: visible</h2>
+	<p> 디폴트 값으로, 영역을 벗어나는 부분이 그대로 나옴 </p>
+</div>
+
+<br>
+
+<div class='hidden'>
+	<h2>overflow: hidden</h2>
+	<p> 영역을 벗어나는 부분은 보이지 않음 </p>
+</div>
+
+<br>
+
+<div class='scroll'>
+	<h2>overflow: scroll</h2>
+	<p> 무조건 모든 축에 스크롤이 생기며, overflow-x/overflow-y 속성을 사용하면 가로/세로 축에만 스크롤 설정 가능함</p>
+</div>
+
+<br>
+
+<div class='auto'>
+	<h2>overflow: auto</h2>
+	<p> 필요할 때만 스크롤이 추가됨</p>
+</div>
+
+</body>
+</html>

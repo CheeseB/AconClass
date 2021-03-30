@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 일반적인 이름있는 함수 - 호출 사용 */
+
+function namedFunc(){
+	console.log('a');
+}
+namedFunc();
+
+
+function arguFunc(n){
+	console.log(n);
+	return n+100;
+}
+arguFunc(100);
+
+var result = arguFunc(100);
+console.log(result);
+
+
+// 자바스크립트는 변수에 다른 함수를 할당해서 사용할 수 있음
+var varFunc = arguFunc;
+result = varFunc(300);
+console.log(result);
+
+
+// 변수와 마찬가지로 함수도 선언 전에 호출이 가능함
+// 함수가 생성되는 시점이 실행 단계가 아닌 컴파일 단계이기 때문
+aaa();
+function aaa(){
+	console.log('aaa');
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

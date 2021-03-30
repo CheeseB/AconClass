@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel='stylesheet' type='text/css' href='sample00_basic.css'>
+<style>
+	.internal {
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<!--
+	name: 서버쪽 키값
+	id: 유일한 키(중복 불가) - 내부적으로 하나의 엘리먼트를 특정지어 사용하기 위함.
+	class: 중복 가능한 키 - 여러가지 엘리먼트를 한꺼번에 조작하기 위함.
+		*id와 class는 css,js에서 사용하기 위함
+	-->
+	이름:<input type='text' name='userid' id='userid' class='test'>
+	나이:<input type='text' name='age' id='userage' class='test'>
+	
+	<p style='color:blue;'>inline style</p>
+	<p class='internal'>internal style</p>
+	<p id='external'>external style</p>
+</body>
+</html>

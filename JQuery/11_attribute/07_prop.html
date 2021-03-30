@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('button').on('click', function(){
+				// 체크가 되어있든 안되어있든 checked로 출력됨
+				console.log($('#my').attr('checked'));
+
+				// 체크가 되어있으면 true, 아니면 false 출력됨
+				console.log($('#my').prop('checked'));
+			});
+		});
+	</script>
+</head>
+<body>
+	A<input id="my" type="checkbox" name="my" checked="checked"><br>
+	<button>OK</button>
+</body>
+</html>

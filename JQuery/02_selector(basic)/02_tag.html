@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// jquery 태그 선택 후 css속성 변경
+			$('p').css('color', 'red');
+
+
+			/* HTML 태그 반환 */
+			// js 사용: js용 dom객체로 반환(HTMLCollection)
+			console.log('p: js >>> ', document.getElementsByTagName('p'));
+
+			// jquery 사용: jquery dom객체로 반환(fn) - js 함수 사용불가
+			var x = $('p');
+			console.log('p: jquery >>> ', x);
+
+			
+			/* 배열로 태그 접근 */
+			console.log(x[0], x[1], x.length);
+			console.log(x[0].innerText, x[1].innerText);
+			
+			// $('div')[0]은 jquery 객체가 아닌 태그라서 js 함수 사용 가능
+			console.log('첫번째 div: ', $('div')[0].innerText);
+			console.log('두번째 div: ', $('div')[1].innerText);
+
+			//접근한 태그의 내부 값, css 속성 변경 
+			$('div')[1].innerText = 'test';
+			$(x[1]).css('color', 'blue');
+		});
+	</script>
+</head>
+<body>
+	<p>hello</p>
+	<p>hello2</p>
+	<div>world</div>
+	<div>world2</div>
+</body>
+</html>

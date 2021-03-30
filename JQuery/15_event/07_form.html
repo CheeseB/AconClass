@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+        $(function (){
+			/* form은 submit */
+            $('#myForm1').on('submit', function() {
+				console.log('submit======');
+
+				// 기본 액션 동작이 실행되지 않도록 함
+				event.preventDefault();
+
+				// 함수 실행이 멈춤 (이후 동작 실행안됨)
+				// preventDefault와 마찬가지로 액션 실행안됨
+				return false;
+
+				// 액션의 타겟 페이지 변경
+				$('#myForm1').attr('action', '../target_1.html');
+			});
+
+			/* button은 click */
+			$('#b').on('click', function() {
+				event.preventDefault();
+				
+				console.log('b click');
+
+				$('#myForm2').attr('action', '../target_1.html');
+
+				return false;
+			});
+        });
+	</script>
+</head>
+<body>
+	<form id="myForm1" action="../target.html">
+		<button id="a">a</button><br>
+		<input type="submit" value="전송">
+	</form>
+	<hr>
+	<form id="myForm2" action="#">
+		<button id="b">b</button>
+	</form>
+</body>
+</html>

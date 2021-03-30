@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 전체문서의 모든 태그들 중 첫번째 태그 - eq(0)과 동일
+			var x = $(':first');
+			console.log(x[0]); // html
+
+			// 전체문서의 모든 태그들 중 마지막 태그 - eq(-1)과 동일
+			var x = $(':last');
+			console.log(x[0]); // div
+
+			// ul 태그들 중 첫번째 태그
+			var x = $('ul:first');
+			console.log(x.text()); // A A2 A3 A4
+
+			// li 태그들 중 마지막 태그
+			var x = $('li:last');
+			console.log(x.text()); // b4
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>A</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+	</ul>
+	<ul>
+		<li>b</li>
+		<li>b2</li>
+		<li>b3</li>
+		<li>b4</li>
+	</ul>
+	<div>
+		<p>Hello</p>
+		<p>hello-end</p>
+	</div>
+	<div>hello-endenenenenenenen</div>
+</body>
+</html>

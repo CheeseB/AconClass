@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('button').click(function(){
+				// 요소를 위로 올리는 효과
+				$(this).parent().slideUp('slow', function(){
+					$('#msg').text($(this).text() + '완료됨');
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<button>Hide one</button>
+		<input type="text" value="one">
+	</div>
+	<div>
+		<button>Hide two</button>
+		<input type="text" value="two">
+	</div>
+	<div>
+		<button>Hide three</button>
+		<input type="text" value="three">
+	</div>
+</body>
+</html>

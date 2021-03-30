@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//고전 이벤트
+	window.onload = init;
+	
+	window.onload = function(){
+		var form = document.getElementById('xxx');
+		console.log(form);
+		document.getElementById('xxx').onsubmit = function(){
+			alert('xxxx');
+			event.preventDefault();
+		};
+		
+		var form = document.getElementById('yyy');
+		console.log(form);
+		document.getElementById('yyy').onsubmit=function(){
+			alert('yyyyy');
+			return false;
+		};
+	};
+	
+	function xxx() {
+		console.log("xxx호출");
+		alert("submit");
+	}
+	function xxx2() {
+		var id = document.getElementById("userid").value;
+		var passwd = document.getElementById("passwd").value;
+		var result = false;
+		if (id.length >= 3 && passwd.length != 0)
+			result = true;
+		else {
+			result = false;
+			alert("양식에 맞춰주세요.");
+		}
+		return result; //true이면 target.html로 이동합니다. 
+	}
+	function xxx3(e) {
+		alert("xxx submit");
+		e.preventDefault(); //action 금지 event.pervent() 매개변수로 넘어온 이벤트 동작 정지
+		console.log("=======");
+	}
+</script>
+</head>
+<body>
+<form action="target.html" onsubmit="xxx()"><!-- submit이벤트 발생 시 함수 xxx() 실행  -->
+아이디======1<input type="text" name="userid" ><br>
+비번<input type="text" name="passwd" ><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br>
+<input type="reset" value="취소"><br>
+</form>
+<hr>
+<form action="target.html" onsubmit="return xxx2()"><!-- return 주의 -->
+아이디======2<input type="text" name="userid" id="userid"><br>
+비번<input type="text" name="passwd" id="passwd"><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br>
+<input type="reset" value="취소"><br>
+</form>
+<hr>
+<form action="target.html" onsubmit="xxx3(event)"><!-- 인라인방식일 때 event를 매개변수로 넘김 -->
+아이디======3<input type="text" name="userid" ><br>
+비번<input type="text" name="passwd" ><br>
+<button>버튼</button>
+<input type="submit" value="로그인"><br>
+<input type="reset" value="취소"><br>
+</form>
+
+<form action="target.html" id="test">
+아이디======4<input type="text" name="userid" ><br>
+비번<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br>
+<button>버튼</button>
+</form>
+
+<form action="target.html" id="xxx"><!-- 고전모델방식 onsubmit 삭제 -->
+아이디======5<input type="text" name="userid" ><br>
+비번<input type="text" name="passwd" ><br>
+<input type="submit" value="로그인"><br>
+<button>버튼</button>
+</form>
+</body>
+</html>

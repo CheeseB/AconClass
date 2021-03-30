@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('button').on('click', function(){
+				// 대상이 흩어져 있는 경우
+				// 흩어진 요소들이 자동으로 첫번째 요소로 이동하고 wrap 됨
+				$('.my').wrapAll('<div style="border: 1px solid black"></div>');
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my">홍길동</div>
+		<div class="my">이순신</div>
+	</div>
+	<p>xxxx</p>
+	<div class="my">유관순</div>
+	<button>ok</button>
+</body>
+</html>

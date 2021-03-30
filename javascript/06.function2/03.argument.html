@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 자바스크립트의 함수는 일급 객체로, 일급 함수라고도 함
+ * 일급 객체란?: https://frontsom.tistory.com/3
+ */
+
+function aaa(){
+	console.log('aaa 함수');
+}
+
+// 함수의 인자로 함수를 받아서 사용 가능함
+function bbb(x){
+	console.log('bbb 함수');
+	x();
+}
+
+bbb(aaa); // bbb함수 aaa함수
+
+
+console.log('===========');
+
+
+// 함수에서 다른 함수 리턴 가능
+function returnAAA(){
+	return aaa;
+}
+
+var a = returnAAA();
+a(); // aaa 함수
+
+
+console.log('===========');
+
+
+// 함수에서 익명함수 리턴 가능
+function ccc(){
+	return function(n1, n2){
+		return n1+n2;
+	}
+}
+
+var c = ccc();
+console.log(c(10, 20)); // 30
+
+
+console.log('===========');
+
+
+// 함수에서 정의된 매개변수와 호출하는 인자 개수가 달라도 실행 가능함
+// 자바스크립트는 메소드 호출 시 파라미터의 개수를 체크하지 않음
+
+function printValue(n1, n2){
+	console.log(n1, n2);
+}
+
+printValue(); // undefined undefined
+printValue('a'); // a undefined
+printValue('a', 'b'); // a b
+printValue('a', 'b', 'c'); // a b
+
+
+console.log('===========');
+
+
+function ttt(){
+	console.log('ttt 호출');
+	return function(){
+		console.log('eee 호출');
+	};
+}
+
+var k = ttt(); // ttt 호출
+k(); // eee 호출
+
+
+console.log('===========');
+
+
+// arguments: 함수로 넘어오는 파라미터를 배열로 관리함 (함수 내에서 자동으로 생성되는 내장 변수)
+// 전달되는 파라미터를 모두 출력하고자 할 때 사용
+// arguments.length: 파라미터 개수, arguments[index]: 요소 접근
+function one(x, y, z){
+	for(var i=0; i<arguments.length; i++){
+		console.log(arguments[i]);
+	}
+}
+
+one(10, 20); // 10, 20
+one(10, 20, 30); // 10, 20, 30
+one(10, 20, 30, 40); // 10, 20, 30, 40
+
+
+// arguments.callee: 현재 실행되고 있는 함수를 나타냄
+// 재귀 호출시 유용하게 사용 가능
+function makeFactorialFunc(){
+	return function(x){
+		if(x<=1) return 1;
+		return x*arguments.callee(x-1);
+	}
+}
+
+var result = makeFactorialFunc()(5);
+console.log(result); // 120 (5*4*3*2*1)
+
+</script>
+</head>
+<body>
+</body>
+</html>

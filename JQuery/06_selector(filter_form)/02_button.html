@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/*
+		[속성값 읽기, 쓰기]
+			js함수: .setAttribute('속성이름', '속성값') - .getAttribute('속성이름')
+			jquery객체함수: .attr('속성이름', '속성값') - .attr('속성이름')
+		*/
+		$(function(){
+			// button 또는 type='button'
+			$(':button').css('border', '3px solid black');
+
+			$('#disable').click(function(){
+				// enabled 속성 삭제
+				$('input[type="text"]:enabled').removeAttr('enabled');
+				// disabled 속성 설정
+				$('input[type="text"]:enabled').attr('disabled', 'disabled');
+			});
+
+			$('#enable').click(function(){
+				// disabled 속성 삭제
+				$('input[type="text"]:disabled').removeAttr('disabled');
+				// enabled 속성 설정
+				$('input[type="text"]:disabled').attr('enabled', 'enabled');
+			});
+		});
+	</script>
+</head>
+<body>
+	<input type="text" id="first">
+	<input type="text" id="second" disabled="disabled">
+	<input type="button" value="enable" id="enable">
+	<button id="disable">disable</button>
+</body>
+</html>

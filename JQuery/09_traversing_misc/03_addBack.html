@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .addBack(): 필터링 이전 요소까지 포함
+			// 여기선 p 뿐만 아니라 #x 까지 css가 적용됨
+			$('#x').find('p').addBack().css('color', 'red');
+		});
+	</script>
+</head>
+<body>
+	<div id="x">
+		A
+		<span>B</span>
+		<p>C</p>
+	</div>
+	<div>D
+		<p>E</p>
+	</div>
+</body>
+</html>

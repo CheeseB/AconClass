@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/* 중요! */
+		$(function(){
+			// $.each(obj, func): 배열이나 맵 등을 순회하며 데이터를 얻어옴
+			// function 내에서 false를 리턴하면 반복을 중지함(break)
+			
+			var s = ['a', 'b', 'c', 'd', 'e']; // array
+			$.each(s, function(idx, data){
+				console.log(idx, data);
+			});
+
+			console.log('=============');
+
+			var s2 = {'a':10, 'b':20, 'c':20}; // json
+			$.each(s2, function(key, val){
+				console.log(key, val);
+			});
+
+			console.log('=============');
+
+			$.each(s, function(idx, data){
+				console.log(idx, data);
+				return data != 'c'; // false인 경우 break (c일때 빠져나옴)
+			});
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>

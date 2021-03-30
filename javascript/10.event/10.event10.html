@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function(){
+		document.querySelector('#vi').addEventListener('click', setView);
+		document.querySelector('#unvi').addEventListener('click', unsetView);
+	}
+
+	// 인라인방식 -> addEventListner방식으로 변환: setView, unsetView를 사용함수 등록
+
+	function setView(){
+		var image = document.querySelector('#images'); // id images인 태그
+		image.style.display='block'; // 블럭 방식
+	}
+
+	function unsetView(){
+		var image = document.querySelector('#images');
+		image.style.display = 'none'; // 화면에서 감추기
+	}
+</script>
+</head>
+<body>
+<!-- 
+	<input type='button' id='vi' value='보이기' onclick='setView()'><br>
+	<input type='button' id='unvi' value='감추기' onclick='unsetView()'><br>
+-->
+	<input type='button' id='vi' value='보이기'><br>
+	<input type='button' id='unvi' value='감추기'><br>
+	<img id='images' src='../img/a.jpg'>
+</body>
+</html>

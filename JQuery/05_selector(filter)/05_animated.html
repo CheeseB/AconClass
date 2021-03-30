@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			background: red;
+			border: 1px solid blue;
+			width: 70px;
+			height: 70px;
+			margin: 0 3px;
+			float: left;
+		}
+		.toggleWidth{
+			width: 40px;
+		}
+	</style>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 클릭시 실행
+			$('#run').click(function(){
+				// :animated - 현재 애니메이션이 동작되고 있는 요소
+				// toggleClass - class 효과 끄기/켜기
+				$(':animated').toggleClass('toggleWidth');
+			});
+
+			function animateIt(){
+				$('#ani').slideToggle('slow', animateIt);
+			}
+			animateIt();
+		});
+	</script>
+</head>
+<body>
+	<div></div>
+    <div id="ani"></div>
+    <div></div>
+    <button id="run">Run</button>
+</body>
+</html>

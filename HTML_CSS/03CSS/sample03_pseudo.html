@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* 링크 관련 의사코드 */
+	/* 기본  */
+	a:link {
+		color: red;
+	}
+	
+	/* 이미 방문함 */
+	a:visited {
+		color: green;
+	}
+	
+	/* 마우스 올림  */
+	a:hover {
+		color: pink;
+	}
+	
+	/* 마우스 클릭중  */
+	a:active {
+		color: blue;
+	}
+	
+/* 자식 관련 의사코드 */
+	/* 첫번째 자식인 p 태크 (p의 첫번째 자식 아님) */
+	p:first-child {
+		background-color: yellow;
+	}
+	
+	/* 마지막 자식인 p 태크 (p의 첫번째 자식 아님) */
+	p:last-child {
+		background-color: orange;
+	}
+	
+	/* 유일한 자식인 p 태크  */
+	p:only-child {
+		background-color: pink;
+	}
+	
+	/* n번째 자식인 p 태크  */
+	p:nth-child(2n) {
+		background-color: lightgreen;
+	}
+	
+	/*	first-child: 무조건 첫 자식에만 적용됨(span이 첫자식이 아니라면 아무데도 적용 안됨)
+		first-of-type: span인 자식들 중 첫번째에 적용됨 */
+	span:first-child {
+		border: 1px solid black;
+	}
+	
+	span:first-of-type {
+		border: 1px solid black;
+	}
+
+</style>
+</head>
+<body>
+
+<a href='#'>링크</a>
+
+<div>
+	<p>첫자식</p>
+	<p>둘째자식</p>
+	<p>셋째자식</p>
+	<p>넷째자식</p>
+	<p>다섯째자식</p>
+</div>
+
+<div>
+	<p>유일한 자식</p>
+</div>
+
+<div>
+	<div>첫자식(first-child)</div>
+	<span>span중 첫자식(first-of-type)</span>
+	<span>span중 둘째자식</span>
+</div>
+
+</body>
+</html>

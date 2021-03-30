@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function xxx(){
+		var arr = document.getElementsByName('fruits') // 이름이 fruits인 dom의 배열
+		// var arr = document.getElementsByClassName('fruits'); // 클래스가 있다면 이것도 잘 동작함
+		console.log(arr);
+		var str = '';
+		
+		for (var x of arr){
+			if(x.checked){ // 선택된 항목만 선별
+				str += x.value + '<br>';
+			}
+		}
+		
+		/* div, span 태그는 id로 불러온다음 innerText나 innerHTML로 그 안에 텍스트 삽입 가능함
+		innerText는 태그까지 그냥 문자열로 출력해버림. innerHTML로 써야 태그가 적용됨 */
+		
+		// document.getElementById('result').innerText = '<h1>'+str+'</h1>';
+		document.getElementById('result').innerHTML = '<h1>'+str+'</h1>';
+	}
+</script>
+</head>
+<body>
+	좋아하는 &nbsp;&nbsp; 과일 선택하기<br>
+	사과<input type='checkbox' name='fruits' class = 'fruits' value='apple'><br>
+	오렌지<input type='checkbox' name='fruits' class = 'fruits' value='orange'><br>
+	바나나<input type='checkbox' name='fruits' class = 'fruits' value='banana'><br>
+	<button onclick='xxx()'> 결과 보기 </button>
+	
+	<div id='result'></div>
+</body>
+</html>

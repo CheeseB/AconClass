@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<style>
+	.new {
+		border: 5px solid red;
+	}
+</style>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('button').on('click', function(){
+			// text를 포함한 자식(+자손) 요소의 제거
+			$('.my1').empty();
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my1">홍길동</div>
+		<div class="my2">이순신</div>
+		<div class="my3">유관순</div>
+		
+	</div>
+	<div>
+		<div class="inner first">테스트1</div>
+		<div class="inner second">테스트2</div>
+	</div>
+	<button>toggle</button>
+</body>
+</html>

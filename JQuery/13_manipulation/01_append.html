@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/*	text()는 기존의 내용을 덮어쓰지만
+			append(), prepend()는 기존 컨텐츠가 있으면 그 뒤/앞에 내용이 추가됨 */
+		$(function(){
+			$('button').on('click', function(){
+				// 타겟.append(내용) , 내용.appendTo(타겟): 기존 컨텐츠 뒤에 내용 추가
+            	$('.my').append($('<span>장군</span>'));
+        		$('<span>장군</span>').appendTo($('.my'));
+            	
+				// h1을 my 뒤로 이동시키기
+				$('.my').append($('h1'));
+			})
+		});
+	</script>
+</head>
+<body>
+    <h1>영웅들</h1>
+    <div>
+       <div class="my">홍길동</div>
+       <div class="my">이순신</div>
+    </div>
+    <button>ok</button>
+</body>
+</html>

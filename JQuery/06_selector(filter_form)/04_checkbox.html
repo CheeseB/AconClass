@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// checkbox를 span 태그로 감싸준 후, 부모 요소인 span에 스타일 지정
+			$('input:checkbox').wrap('<span></span>').parent().css('border', '3px dotted red');
+
+			// 첫 시작시 checked된 것을 선택하여, 그 값을 텍스트에 지정
+			$('input:text').val($('input:checked').val());
+		});
+	</script>
+</head>
+<body>
+	사과<input type="checkbox" checked="checked" value="사과"><br>
+	배<input type="checkbox"  value="배"><br>
+	바나나<input type="checkbox"  value="바나나"><br>
+	<input type="text">
+</body>
+</html>

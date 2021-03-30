@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 콘솔 출력
+	console.log('hello world', 100, 'aaa');
+	console.log();
+	
+	// 브라우저 출력
+	document.write('<h1>hellw world - document.write</h1>');
+	
+	//dom(): body에 있는 엘리먼트(태그) 직접 접근 제어 시 문재 발생
+	//맨 위부터 차례로 실행하기 때문에 태그 생성 전에 스크립터 명령이 실행되기 때문
+	document.getElementById('test').style='background-color:red';
+</script>
+</head>
+<body>
+
+<!-- HTML의 맨 위부터 차례로 실행되므로 Head 부분의 script가 body보다 더 먼저 실행됨-->
+<!-- script의 hello world가 먼저 실행되어 더 위에 나타남 -->
+hello - body
+
+<h1 id='test'>테스트 h1</h1>
+
+</body>
+</html>

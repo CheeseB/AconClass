@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 스크립트가 위에있어도 body로딩 후에 함수 실행되므로 엘리먼트 접근 가능
+	function xxx(){
+		console.log('xxx 호출');
+		var id = document.getElementById('userid');
+		id.value = 'test';
+	}
+</script>
+</head>
+<body onload='xxx()'> <!-- body에 onload 사용해서 body가 로딩된 후에 함수가 실행되도록 함 -->
+	아이디<input type='text' name='userid' id='userid' value='abc'>
+</body>
+</html>

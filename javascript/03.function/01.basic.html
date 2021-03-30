@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 자바스크립트의 변수 범위는 블록 단위가 아닌 함수 단위이므로
+ * if나 for문과 같은 블록에는 영향을 받지 않음
+ */
+function outputNumbers(count) {
+	for (var i = 0; i < count; i++) {
+		console.log(i);
+	}
+	console.log('i>>', i); // 함수 범위
+}
+
+outputNumbers(5);
+// console.log(i); // error! (not defined)
+
+
+var a = 10; // 전역변수
+function func(){
+	var b = 20; // 지역변수
+	c = 30; // window 객체의 속성으로 추가됨 (권장 안함)
+	// var가 없으면 파싱 단계가 아닌 런타임에 변수가 동적 정의됨
+	
+	console.log('a in func =', a);
+}
+
+func();
+console.log('c =', c);
+console.log('a =', a);
+// console.log('b =', b); // error!
+
+</script>
+</head>
+<body>
+</body>
+</html>

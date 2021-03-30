@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var child; // 자식창 참조 - 전역변수
+	
+	function yyy1() {
+		// 인자: 오픈할 창, 창 이름 설정, 창 옵션
+		child = window.open('child.html', 'childName', 'width=200, height=300');
+		// 아무 인자도 넣어주지 않으면 새 탭에 빈 창을 띄워줌
+		// child = window.open();
+	}
+	
+	function yyy2(){
+		child.close();
+	}
+	
+	function yyy3(){
+		window.close();
+	}
+
+</script>
+</head>
+<body>
+
+	여기는 부모창입니다.<br>
+	
+	<!-- inline 방식 이벤트처리 -->
+	<button onclick='yyy1()'>창 생성</button>
+	<button onclick='yyy2()'>자식 창 닫기</button>
+	<button onclick='yyy3()'>창 닫기</button>
+
+</body>
+</html>

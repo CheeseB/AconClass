@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// .parents(선택자): 현재 요소의 모든 상위 요소 중 선택자 요소 모두 반환
+			// 선택자 생략 시 html 포함한 모든 상위요소 반환
+			$("p").parents().css("color", "red");
+        	$("p").parents("#my").css("font-size", "40px");
+		});
+	</script>
+</head>
+<body>
+	<div>
+		A
+		<div>
+			B
+			<p>C</p>
+		</div>
+	</div>
+	<div id="my">
+		<p>D</p>
+	</div>	
+</body>
+</html>

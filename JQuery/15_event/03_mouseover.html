@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 두가지 이벤트 설정
+			// mouseover: 마우스 올렸을 때 발생
+			$('#a').on('click mouseover', function(){
+				console.log('ok', event.screenX, event.screenY);
+				$('#result').text(event.screenX);
+			});
+
+			$('#b').on('click', function(){
+				// 클릭 이벤트만 제거
+				$('#a').off('click');
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="a">ok</button>
+	<button id="b">cancel</button>
+	<div id="result"></div>
+</body>
+</html>

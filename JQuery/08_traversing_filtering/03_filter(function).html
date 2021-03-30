@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		/* 중요! */
+		$(function(){
+			// index = 0부터 시작
+			// 모든 li태그들을 대상으로 for문을 돌리는것과 같음
+			$('li').filter(function(idx, ele){
+				console.log(idx, ele.innerHTML);
+				return ele.innerHTML == 'A4'; //조건식이 true인 element들만 반환
+			}).css('color', 'red')
+			.end()
+			.filter(function(idx, ele){
+				return idx % 3 == 0;
+			}).css('background-color', 'green').end();
+		});
+	</script>
+</head>
+<body>
+	<p>Hello</p>
+	<ul>
+		<li>A1</li>
+		<li>A2</li>
+		<li>A3</li>
+		<li>A4</li>
+		<li>A5</li>
+		<li>A6</li>
+		<li>A7</li>
+		<li>A8</li>
+	</ul>
+</body>
+</html>

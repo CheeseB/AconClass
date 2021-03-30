@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// $.merge(a, b): a배열과 b배열을 병합해 새로운 배열 생성
+			// 중복값이 있어도 덮어쓰지 않음
+			var s = ['a', 'b', 'c'];
+			var s1 = ['c', 1, 2];
+			var arr = $.merge(s, s1);
+			console.log(arr); // a b c c 1 2
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>

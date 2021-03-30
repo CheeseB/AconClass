@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 보여주고 감추는 애니메이션
+			$('#hider').click(function(){
+				$('span').hide('slow');
+			});
+
+			$('#shower').click(function(){
+				$('span').show(2000, function(){
+					$('#red').css('font-size', '30px');
+				})
+			})
+		});
+	</script>
+</head>
+<body>
+	<button id="hider">Hide</button>
+	<button id="shower">show</button>
+	<div>
+	<span>이성계</span><span>이순신</span>
+	<span>강감찬</span><span>윤봉길</span>
+	<span>정몽주</span><span id="red">위인들</span>
+	</div>
+</body>
+</html>

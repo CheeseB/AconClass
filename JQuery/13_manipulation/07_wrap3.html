@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>attribute(속성)</title>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		// 선택된 태그의 안에서 wrap 함
+		// text값을 포함하여 자식요소를 에워쌈
+		// (그냥 wrap은 태그의 겉을 wrap함)
+		$("button").on("click", function() {
+			 $(".my").wrapInner('<div style="border: 1px solid black"></div>');
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>영웅들</h1>
+	<div>
+		<div class="my">홍길동</div>
+		<div class="my">이순신</div>
+	</div>
+	<button>ok</button>
+</body>
+</html>
+
+

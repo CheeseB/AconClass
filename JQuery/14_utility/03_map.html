@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// $.map(arr, func): 배열을 가공하여 배열로 반환
+
+			var s = ['january', 'february', '33333', '44444', '55555', '66666'];
+			var arr = $.map(s, function(data, idx) {
+				console.log(data, idx);
+				return data.substring(0, 3);
+			});
+			console.log(arr);
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>

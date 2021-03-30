@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('#xxx').on('click', function(){
+				// .removeAttr(속성명): 속성 제거
+				$('#my').removeAttr('checked');
+			});
+
+			$('#yyy').on('click', function(){
+				// 속성 추가 및 설정
+				$('#my').attr('checked', 'checked');
+			});
+		});
+	</script>
+</head>
+<body>
+	A <input type="checkbox" name="my" id="my" checked="checked"><br>
+	<button id="xxx">해제</button>
+	<button id="yyy">설정</button>
+</body>
+</html>

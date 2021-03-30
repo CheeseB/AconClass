@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- hello 1, 2, 3 순서대로 출력됨 -->
+
+<script type="text/javascript">
+	console.log('hello1');
+	document.write('<h1>hello1 - script</h1>');
+</script>
+
+hello2 - body
+
+<h1 id='test'>id test header</h1>
+
+<!-- 맨 밑에 쓰는게 제일 좋음 (실행오류가 없음) -->
+<script type="text/javascript">
+	console.log('hello2');
+	document.write('<h1>hello3 - script</h1>');
+	document.getElementById('test').style='background-color:red';
+</script>
+
+</body>
+</html>

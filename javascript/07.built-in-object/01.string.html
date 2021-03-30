@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 문자열 생성 방법 */
+	// 리터럴
+	var s = 'Hello';
+	// new 이용
+	var ss = new String('Hello');
+
+
+/* String 객체 내장 함수 */
+	console.log('문자열 길이'. s.length); // 5
+	console.log('특정 인덱스의 문자'. s.charAt(0)); // H
+	console.log('문자열 연결'. s.concat(' world'), s.concat(' freaking world'));
+	// hello world hello freaking world
+	console.log('특정 문자의 인덱스'. s.indexOf('e')); // 1
+	console.log('부분문자열 (시작 인덱스, 끝 인덱스-1 까지 반환)'. s.substring(1, 3)); // el
+	console.log('부분문자열 (시작 인덱스, 문자 개수만큼 반환)'. s.substr(1, 3)); // ell
+	console.log('대문자로'. s.toUpperCase()); // HELLO
+	console.log('소문자로'. s.toLowerCase()); // hello
+	
+	var sss = 'Hello world happy';
+	var arr = sss.split(" ") // 공백 분할
+	for (var i in arr) {
+		console.log(arr[i]);
+	}
+	
+	var sss2 = 'Hello/World/happy/xxx/yyy';
+	var arr2 = sss2.split('/', 3); // '/' 기준 분할 3개까지만
+	for (var i in arr2) {
+		console.log(arr2[i]);
+	}
+	
+	var s2 = 'Hello';
+	console.log('특정 패턴 replace', replace('ell', 'alo'));
+
+</script>
+</head>
+<body>
+</body>
+</html>

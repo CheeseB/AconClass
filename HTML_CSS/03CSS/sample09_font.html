@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	/* 사용자의 컴퓨터에 폰트가 없으면 폰트 적용 안됨 */
+	/* 여러 폰트를 적어놓으면 맨 처음 폰트가 있으면 사용하고, 없으면 그다음에 적은 폰트를 탐색함 */
+	/* serif, sans-serif, monospace
+		- generic family로, 비슷하게 보이는 font-family(구체적인 폰트)들의 그룹임 */
+
+	.font-arial {
+		font-family: '없는 폰트', sans-serif;
+	}
+	
+	.font-roman {
+		font-family: '없는 폰트', serif;
+	}
+	
+	.font-ansang {
+		font-family: '굵은안상수체', sans-serif;
+	}
+	
+	p {
+		/* 그외 속성들 */
+		font-size: 2em;
+		font-style: italic;
+		font-weight: bold;
+	}
+	
+</style>
+</head>
+<body>
+
+	<h1 class='font-arial'> 가나다 abc </h1> <!-- sans-serif 적용됨 -->
+	<h1 class='font-roman'> 가나다 abc </h1> <!-- serif 적용됨 -->
+	<h1 class='font-ansang'> 가나다 abc </h1> <!-- 굵은안상수체 적용됨 -->
+	
+	<p> 가나다 abc </p>
+
+</body>
+</html>

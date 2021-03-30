@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// text값 반환 (innerText 와 동일)
+			// html 태그가 있을 경우 모두 제거 후 문자열만 반환
+			$('button').on('click', function(){
+				console.log($('#x').text()); // getter
+
+				var data = $('#x').text();
+				$('#result').text(data); // setter
+			})
+		});
+	</script>
+</head>
+<body>
+	<p id="x"><span>홍길동</span></p>
+    <div id="result"></div>
+	<button>OK</button>
+</body>
+</html>

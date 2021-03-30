@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// mouseenter 후에 마우스 나가면 mouseLeave 발생
+			$('#outer').mouseleave(function(){
+				$('#log').append('<div>mouseLeave 발생</div>');
+			})
+		});
+	</script>
+</head>
+<body>
+	<div id="outer">outer
+		<div id="inner">inner</div>
+	</div>
+	<div id="log"></div>		
+</body>
+</html>

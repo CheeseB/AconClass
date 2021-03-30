@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$('.myClass').css('color', 'red');
+			console.log('첫번째 myClass>> ', $('.myClass').first().text()); // 첫번째
+			console.log('세번째 myClass>> ', $('.myClass').last().text()); // 마지막
+		});
+	</script>
+</head>
+<body>
+   <p class="notMe">div class="notMe"</p>
+   <p class="myClass">p class="myClass1"</p>
+   <div class="myClass">div class="myClass2"</div>
+   <div class="myClass">div class="myClass3"</div>
+</body>
+</html>

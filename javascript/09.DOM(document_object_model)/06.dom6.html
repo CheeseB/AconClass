@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function mySort(s){
+		console.log('mySort 호출', s);
+		var str = document.getElementById('v1').value; // 문자열 가져오기
+		var arr = str.split(','); // 배열 생성
+		if(s == 'asc'){
+			arr.sort(ascSort);
+		}else{
+			arr.sort(descSort);
+		}
+		var result = document.getElementById('result');
+		result.value = arr; // id가 result인 곳에 출력
+	}
+	function ascSort(a, b){
+		return a-b;
+	}
+	function descSort(a, b){
+		return b-a;
+	}
+</script>
+</head>
+<body>
+	입력값<input type='text' name='v1' id='v1' value='1,2,3,4,5,6'><br>
+	<button onclick='mySort("asc")'>오름차순 정렬</button><br>
+	<button onclick='mySort("desc")'>내림차순 정렬</button><br>
+	결과값<input type='text' name='result' id='result'>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// 특정 문자열을 가진 태그 찾기
+			// 대소문자 구분하며, 자식까지 포함해서 찾음
+			$('div:contains("Hello")').css('color', 'red');
+		});
+	</script>
+</head>
+<body>
+	<div>Hello !!!!</div>
+	<div>Hi! hello</div>
+	<div>MyHello , good</div>
+	<div>
+		<p>Hello</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* [비교 연산자]
+ * ==, != : equal 연산자로, 필요 시 형변환 후 비교함
+ * ===, !== : identical 연산자로, 형변환 없이 비교함
+ */
+
+// true
+console.log(10 == '10');
+console.log(0 == false);
+console.log(null == undefined);
+
+// false
+console.log(10 === '10');
+console.log(0 === false);
+console.log(null === undefined);
+
+
+/* [논리 연산자]
+ * 자바스크립트는 논리값 뿐 아니라 다른 데이터도 논리 연산자를 사용할 수 있음
+ * 좌 객체 || 우 객체 : 좌가 참이면 우를 평가하지 않고 좌를 리턴, 좌가 거짓이면 우 리턴
+ * 좌 객체 && 우 객체 : 좌가 참이면 우 리턴, 좌가 거짓이면 좌 리턴
+ */
+
+console.log('123'|| 0); // 123
+console.log(0 || '123'); // 123
+console.log('123' && 0); // 0
+console.log(0 && '123'); // 0
+
+//활용 예시1. 함수가 인자를 받을 때 반드시 배열을 받아야 하는경우
+function x(a){
+	var arr = a || [];
+}
+x(); // a = []
+x([1,2]); // a = [1,2]
+
+//활용 예시2. 브라우저 간 이벤트 처리 방법이 다른경우
+function eventHandle(e){
+	var e = e || window.event;
+}
+eventHandle(event); // e = 해당 event
+eventHandle(); //e = window event
+
+</script>
+</head>
+<body>
+</body>
+</html>

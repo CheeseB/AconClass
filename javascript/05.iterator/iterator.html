@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* for문의 조건에 변수 여러개 쓸 수 있음 */
+for (var n=0,m=1; n<=5&&m<=5; n++,m++) {
+	console.log(n, m);
+}
+
+
+console.log('===================');
+
+
+/* for(가변수 in 배열/객체): 배열이나 객체를 쉽게 처리할 수 있는 반복문
+ * 가변수 안에는 인덱스 or 키값이 할당됨
+ */
+var arr = [1, 2, 3, 4];
+var obj = {'a': 1, 'b': 2, 'c': 3};
+
+for(x in arr) {
+	console.log(x, arr[x]);
+}
+
+for(y in obj) {
+	console.log(y, obj[y]);
+}
+
+
+console.log('===================');
+
+
+/* [반복문에서의 label]
+ * 반복문의 바로 위에 '레이블명:' 형식으로 레이블을 지정 가능하며,
+ * 다중 반복문에서 한번에 바깥쪽 반복문을 탈출하거나 바깥쪽 반복문으로 수행 시점을 넘길 때 사용함
+ */
+ 
+// break label: 레이블이 지칭하는 반복문을 빠져나감
+OUTER:
+for(var i=0; i<10; i++){
+	for (var j=0; j<5; j++){
+		console.log(i, j);
+		if (j == 2) break OUTER;
+	}
+}
+
+console.log('=====');
+
+// continue label: 레이블이 지칭하는 반복문으로 수행 시점이 넘어감
+OUTER1:
+for(var a=0; a<10; a++){
+	for (var b=0; b<5; b++){
+		console.log(a, b);
+		if (b == 2) continue OUTER1
+	}
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

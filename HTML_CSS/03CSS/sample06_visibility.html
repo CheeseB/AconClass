@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*	요소를 아예 없애버리는 display: none 과 달리
+		요소가 보이지만 않게 할 뿐, 공간은 그대로 차지함 */
+	#box {
+		visibility: hidden;
+		/* visibility: visible; */
+	}
+	
+	/*	table 요소를 위한 값.
+		width와 padding 값은 유지되나, height 값은 무시됨
+		table의 행과 열을 안보이게 하지만, table 레이아웃에는 영향 안 미침
+		다른 요소에 사용된다면 hidden 효과와 동일 */
+	table {
+		visibility: collapse;
+	}
+	
+	/* 투명도 조정 */
+	#box2 {
+		opacity: 0.2;
+	}
+</style>
+</head>
+<body>
+
+<div>
+	<span>Dummy</span>
+	<div id='box'>
+		<span>블라블라블라 랄라블라</span>
+	</div>
+	<span>Dummy</span>
+</div>
+
+<br>
+
+<div>
+	<span>Dummy</span>
+	<table>
+		<tr>
+			<td>Test1</td>
+		</tr>
+		<tr>
+			<td>Test2</td>
+		</tr>
+	</table>
+	<span>Dummy</span>
+</div>
+
+<br>
+
+<div>
+	<span>Dummy</span>
+	<div id='box2'>
+		<span>블라블라블라 랄라블라</span>
+	</div>
+	<span>Dummy</span>
+</div>
+
+</body>
+</html>
