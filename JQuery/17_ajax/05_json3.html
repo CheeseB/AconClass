@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+		$('#a').on('click', getData);
+	});
+	function getData() {
+		$.ajax({
+			type: 'get',
+			url: '05_json3.jsp',
+			dataType: 'json',
+			success: function (data, status, xhr) {
+				$.each(data, function(idx, data) {
+					console.log(data);
+					$('#result').append(data.username+':'+data.age+'<br>');
+				});
+			},
+			error: function (xhr, status, error) {
+				$("#result").append(error+'<br>');
+				$("#result").append(status+'<br>');
+			}			
+		});
+	}
+	</script>
+</head>
+<body>
+	<button id="a">ajax 요청</button><br>
+	<div id="result"></div>
+</body>
+</html>

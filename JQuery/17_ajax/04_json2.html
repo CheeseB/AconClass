@@ -12,24 +12,23 @@
 	function getData() {
 		$.ajax({
 			type: "get",
-			url: "03_json.jsp",
+			url: "04_json2.jsp",
 			dataType: "json",
 			success: function (data, status, xhr) {
-				// 여기서 data는 json객체
-				// dataType: "json" 이면 바로 사용가능
-				var username= data.username;
-				var age= data.age;
+				$.each(data, function(idx, data) {
+					console.log(data);
+					$('#result').append(data.username+':'+data.age+'<br>');
+				});
 
-				console.log(username , age);					
-				$("#result").text(username+ ":"+ age);
-
-				/* dataType: "text" 면 text를 object로 변환하여 사용해야 함 */
-				// var jsondata= JSON.parse(data);
-				// var username= jsondata.username;
-				// var age= jsondata.age;
+				/* 위와 동일 */
+				// for (var i=0; i<data.length; i++){
+				// 	console.log(data);
+				// 	$('#result').append(data.username+':'+data[i].age+'<br>');
+				// }
 			},
 			error: function (xhr, status, error) {
-				$("#result").text(error);
+				$("#result").append(error+'<br>');
+				$("#result").append(status+'<br>');
 			}			
 		});
 	}
