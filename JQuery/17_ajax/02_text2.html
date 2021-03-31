@@ -21,7 +21,9 @@
 					v1: $('#v1').val(),
 					v2: $('#v2').val()
 				},
-				dataType: 'text', // 응답 타입
+				// 주의! 서버에서 보내는 응답 타입임
+				// 내가 보낼 데이터타입 아님
+				dataType: 'text',
 				success: function(data, status, xhr){
 					$('#result').text(data);
 				},
