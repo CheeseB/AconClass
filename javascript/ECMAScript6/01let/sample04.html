@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+	const n = 100;
+	console.log(n); // 100
+	try {
+		n = 200;
+	} catch(e) {
+		console.log(e); // TypeError: Assignment to constant variable.
+	}
+
+	try {
+		const m = 100;
+		console.log(m); // 100
+		m = 200;
+	} catch(e) {
+		console.log(m); // Uncaught ReferenceError: m is not defined
+		console.log(e);
+	}
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+	/* 상수 특징: 값 변경 불가, 나머진 let과 동일 */
+	const n = 100;
+	n = 200; // TypeError: Assignment to constant variable.
+
+	/* 반드시 선언과 정의를 같이 해야함 */
+	const m; // SyntaxError: Missing initializer in const declaration
+	m = 200;
+</script>
+<body>
+
+</body>
+</html>

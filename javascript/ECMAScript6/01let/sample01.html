@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+	/* var 특징: 호이스팅, 재정의 가능 */
+	console.log(n); // undefined
+	var n = 100;
+	var n = 200;
+	console.log(n); // 200
+
+	/* var 변수 사용범위 스코프: 함수단위 */
+	if(true){
+		var m = 30;
+	}
+	console.log(m); // 30
+</script>
+<body>
+
+</body>
+</html>
